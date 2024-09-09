@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Orion.Core.Common.Contracts\Orion.Core.Common.Contracts.csproj" />
+    <ProjectReference Include="..\Orion.Core.Common\Orion.Core.Common.csproj" />
+  </ItemGroup>
+
 </Project>
