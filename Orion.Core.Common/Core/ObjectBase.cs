@@ -196,7 +196,7 @@ namespace Orion.Core.Common.Core
         {
             if (_Validator != null)
             {
-                ValidationResult results = _Validator.Validate(this);
+                ValidationResult results = _Validator.Validate((IValidationContext)this);
                 _ValidationErrors = results.Errors;
             }
         }
