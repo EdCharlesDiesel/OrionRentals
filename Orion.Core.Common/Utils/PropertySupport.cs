@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Core.Common.Utils
+namespace Orion.Core.Common.Utils
 {
     public static class PropertySupport
     {

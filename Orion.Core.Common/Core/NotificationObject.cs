@@ -1,11 +1,8 @@
-using System;
-using System.Collections.Generic;
+using Orion.Core.Common.Utils;
 using System.ComponentModel;
-using System.Linq;
 using System.Linq.Expressions;
-using Core.Common.Utils;
 
-namespace Core.Common.Core
+namespace Orion.Core.Common.Core
 {
     public class NotificationObject : INotifyPropertyChanged
     {

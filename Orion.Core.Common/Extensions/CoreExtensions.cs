@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Orion.Core.Common.Core;
+using Orion.Core.Common.Utils;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using Core.Common.Core;
-using Core.Common.Utils;
 
-namespace Core.Common.Extensions
+
+namespace Orion.Core.Common.Extensions
 {
     public static class CoreExtensions
     {

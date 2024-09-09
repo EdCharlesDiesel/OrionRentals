@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.ComponentModel;
 using System.ComponentModel.Composition.Hosting;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text;
-using Core.Common.Contracts;
-using Core.Common.Extensions;
-using Core.Common.Utils;
 using FluentValidation;
 using FluentValidation.Results;
+using Orion.Core.Common.Contracts;
+using Orion.Core.Common.Extensions;
+using Orion.Core.Common.Utils;
 
-namespace Core.Common.Core
+namespace Orion.Core.Common.Core
 {
     public abstract class ObjectBase : NotificationObject, IDirtyCapable, IExtensibleDataObject, IDataErrorInfo
     {
@@ -25,11 +22,11 @@ namespace Core.Common.Core
         }
 
         protected bool _IsDirty = false;
-        protected IValidator _Validator = null;
+        protected IValidator? _Validator = null;
 
-        protected IEnumerable<ValidationFailure> _ValidationErrors = null;
+        protected IEnumerable<ValidationFailure>? _ValidationErrors = null;
 
-        public static CompositionContainer Container { get; set; }
+        public static CompositionContainer? Container { get; set; }
 
         #region IExtensibleDataObject Members
 
@@ -183,7 +180,7 @@ namespace Core.Common.Core
 
         #region Validation
 
-        protected virtual IValidator GetValidator()
+        protected virtual IValidator? GetValidator()
         {
             return null;
         }
