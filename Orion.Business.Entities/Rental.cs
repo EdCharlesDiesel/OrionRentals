@@ -29,18 +29,15 @@ namespace OrionRentals.Business.Entities
 
             public int EntityId
             {
-                get { return RentalId; }
-                set { RentalId = value; }
+                get => RentalId;
+                set => RentalId = value;
             }
 
             #endregion
 
             #region IAccountOwnedEntity members
 
-            int IAccountOwnedEntity.OwnerAccountId
-            {
-                get { return AccountId; }
-            }
+            int IAccountOwnedEntity.OwnerAccountId => AccountId;
 
             #endregion
         }   

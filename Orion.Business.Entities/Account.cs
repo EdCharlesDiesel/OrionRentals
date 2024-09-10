@@ -41,8 +41,8 @@ namespace OrionRentals.Business.Entities
 
         public int EntityId
         {
-            get { return AccountId; }
-            set { AccountId = value; }
+            get => AccountId;
+            set => AccountId = value;
         }
 
         #endregion

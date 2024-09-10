@@ -10,4 +10,8 @@
     <PackageReference Include="FluentValidation" Version="11.9.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Orion.Core.Common\Orion.Core.Common.csproj" />
+  </ItemGroup>
+
 </Project>

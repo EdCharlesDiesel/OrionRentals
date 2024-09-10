@@ -1,9 +1,11 @@
-﻿namespace OrionRentals.Client.Entities
+﻿using Orion.Core.Common.Core;
+
+namespace OrionRentals.Client.Entities
 {
     /// <summary>
     /// Car entity client side.
     /// </summary>
-    public class Car
+    public class Car : ObjectBase
     {
         private int _carId;
         private string? _description;
@@ -14,8 +16,14 @@
 
         public int CarId
         {
-            get { return _carId; }
-            set { _carId = value; }
+            get => _carId;
+            set {
+                if (_carId != value)
+                {
+                    _carId = value;
+                    OnPropertyChanged(()=> CarId);
+                }
+            }
         }        
 
         public string? Description
@@ -25,31 +33,65 @@
                 if (_description != null) return _description;
                 return null;
             }
-            set { _description = value; }
+            set
+            {
+                if (_description != value)
+                {
+                    _description = value;
+                    OnPropertyChanged(() => Description);
+                }
+            }
         }
         
         public string? Color
         {
-            get { return _color; }
-            set { _color = value; }
+            get => _color;
+            set {
+                if (_color != value)
+                {
+                    _color = value;
+                    OnPropertyChanged(() => Color);
+                }
+            }
         }        
 
         public int Year
         {
-            get { return _year; }
-            set { _year = value; }
+            get => _year;
+            set
+            {
+                if (_year != value)
+                {
+                    _year = value;
+                    OnPropertyChanged(() => Year);
+                }
+            }
         }
                
         public decimal RentalPrice
         {
-            get { return _rentalPrice; }
-            set { _rentalPrice = value; }
+            get => _rentalPrice;
+            set
+            {
+                if (_rentalPrice != value)
+                {
+                    _rentalPrice = value;
+                    OnPropertyChanged(() => RentalPrice);
+                }
+            }
         }
         
         public bool CurrentlyRented
         {
-            get { return _currentlyRented; }
-            set { _currentlyRented = value; }
+            get => _currentlyRented;
+            set
+            {
+                if (_currentlyRented != value)
+                {
+                    _currentlyRented = value;
+                    OnPropertyChanged(() => CurrentlyRented);
+                }
+            }
         }
 
     }
