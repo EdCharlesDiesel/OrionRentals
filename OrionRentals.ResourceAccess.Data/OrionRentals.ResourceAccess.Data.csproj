@@ -6,4 +6,21 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orion.Business.Entities\OrionRentals.Business.Entities.csproj" />
+    <ProjectReference Include="..\Orion.Core.Common.Contracts\Orion.Core.Common.Contracts.csproj" />
+    <ProjectReference Include="..\Orion.Core.Common\Orion.Core.Common.csproj" />
+    <ProjectReference Include="..\OrionRentals.ResourceAccess.Data.Contracts\OrionRentals.ResourceAccess.Data.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>
