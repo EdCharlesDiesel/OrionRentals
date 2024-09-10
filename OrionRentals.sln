@@ -15,11 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrionRentals.Business.Entit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrionRentals.Client.Entities", "OrionRentals.Client.Entities\OrionRentals.Client.Entities.csproj", "{AB4640D5-848B-4036-A5A8-A09257967CBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orion.Core.Common.Contracts", "Orion.Core.Common.Contracts\Orion.Core.Common.Contracts.csproj", "{4C3280DA-9F52-404D-ADF8-B45BD45FC3ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orion.Core.Common.Contracts", "Orion.Core.Common.Contracts\Orion.Core.Common.Contracts.csproj", "{4C3280DA-9F52-404D-ADF8-B45BD45FC3ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orion.Core.Common", "Orion.Core.Common\Orion.Core.Common.csproj", "{4DF06D3C-CF69-4812-9630-CF45E5881FA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orion.Core.Common", "Orion.Core.Common\Orion.Core.Common.csproj", "{4DF06D3C-CF69-4812-9630-CF45E5881FA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orion.Core.CommonTests", "Orion.Core.CommonTests\Orion.Core.CommonTests.csproj", "{7FFC7ACF-2F8D-4D13-94FE-A88C2A017AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orion.Core.CommonTests", "Orion.Core.CommonTests\Orion.Core.CommonTests.csproj", "{7FFC7ACF-2F8D-4D13-94FE-A88C2A017AC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resource Access", "Resource Access", "{16676D4F-1E3E-43A8-9369-EDBD6107D488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrionRentals.ResourceAccess.Data", "OrionRentals.ResourceAccess.Data\OrionRentals.ResourceAccess.Data.csproj", "{990991E8-BE39-4E7A-A3A3-A99B979EBE27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrionRentals.ResourceAccess.Data.Contracts", "OrionRentals.ResourceAccess.Data.Contracts\OrionRentals.ResourceAccess.Data.Contracts.csproj", "{8A490691-ABF6-44B5-AFD9-5AB7E6E5973F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,14 @@ Global
 		{7FFC7ACF-2F8D-4D13-94FE-A88C2A017AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FFC7ACF-2F8D-4D13-94FE-A88C2A017AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FFC7ACF-2F8D-4D13-94FE-A88C2A017AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{990991E8-BE39-4E7A-A3A3-A99B979EBE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990991E8-BE39-4E7A-A3A3-A99B979EBE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990991E8-BE39-4E7A-A3A3-A99B979EBE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990991E8-BE39-4E7A-A3A3-A99B979EBE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A490691-ABF6-44B5-AFD9-5AB7E6E5973F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A490691-ABF6-44B5-AFD9-5AB7E6E5973F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A490691-ABF6-44B5-AFD9-5AB7E6E5973F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A490691-ABF6-44B5-AFD9-5AB7E6E5973F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +71,8 @@ Global
 		{4C3280DA-9F52-404D-ADF8-B45BD45FC3ED} = {CCE23C62-C43D-484F-B3ED-B032451A28BF}
 		{4DF06D3C-CF69-4812-9630-CF45E5881FA9} = {CCE23C62-C43D-484F-B3ED-B032451A28BF}
 		{7FFC7ACF-2F8D-4D13-94FE-A88C2A017AC1} = {145C06A2-A7D3-4E23-86BF-8557A9F09D20}
+		{990991E8-BE39-4E7A-A3A3-A99B979EBE27} = {16676D4F-1E3E-43A8-9369-EDBD6107D488}
+		{8A490691-ABF6-44B5-AFD9-5AB7E6E5973F} = {16676D4F-1E3E-43A8-9369-EDBD6107D488}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18CCAACD-9AA2-4632-83E7-34FDCBB566EB}
