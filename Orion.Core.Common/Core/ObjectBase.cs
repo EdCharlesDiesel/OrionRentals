@@ -24,7 +24,7 @@ namespace Orion.Core.Common.Core
         protected bool _IsDirty = false;
         protected IValidator? _Validator = null;
 
-        protected IEnumerable<ValidationFailure>? _ValidationErrors = null;
+        internal IEnumerable<ValidationFailure>? _ValidationErrors = null;
 
         public static CompositionContainer? Container { get; set; }
 

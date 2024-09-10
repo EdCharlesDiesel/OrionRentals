@@ -1,4 +1,5 @@
-﻿using Orion.Core.Common.Core;
+﻿using FluentValidation;
+using Orion.Core.Common.Core;
 
 namespace OrionRentals.Client.Entities
 {
@@ -94,5 +95,21 @@ namespace OrionRentals.Client.Entities
             }
         }
 
+    }
+
+    internal class CarValidator : AbstractValidator<Car>
+    {
+        CarValidator()
+        {
+            RuleFor(obj => obj.Description).NotEmpty();
+            RuleFor(obj => obj.Color).NotEmpty();
+            RuleFor(obj => obj.RentalPrice).GreaterThan(0);
+            RuleFor(obj => obj.Year).GreaterThan(2000).LessThanOrEqualTo(DateTime.Now.Year);
+        }
+
+        protected IValidator GeValidator()
+        {
+            return new CarValidator();
+        }
     }
 }
