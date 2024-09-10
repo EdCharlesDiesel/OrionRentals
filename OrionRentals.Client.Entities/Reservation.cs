@@ -3,96 +3,72 @@
 namespace OrionRentals.Client.Entities
 {
     /// <summary>
-    /// Car entity client side.
+    /// Reservation entity client side.
     /// </summary>
-    public class Car : ObjectBase
+    public class Reservation : ObjectBase
     {
+        private int _reservationId;
+        private int _accountId;
         private int _carId;
-        private string? _description;
-        private string? _color;
-        private int _year;
-        private decimal _rentalPrice;
-        private bool _currentlyRented;
+        private DateTime _rentalDate;
+        private DateTime _returnDate;
+
+        public int ReservationId
+        {
+            get => _reservationId;
+            set
+            {
+                _reservationId = value;
+                OnPropertyChanged(() => ReservationId);
+            }
+        }
+
+        public int AccountId
+        {
+            get => _accountId;
+            set
+            {
+                _accountId = value;
+                OnPropertyChanged(() => AccountId);
+            }
+        }
 
         public int CarId
         {
             get => _carId;
-            set {
-                if (_carId != value)
-                {
-                    _carId = value;
-                    OnPropertyChanged(()=> CarId);
-                }
+            set
+            {
+                _carId = value;
+                OnPropertyChanged(() => CarId);
             }
-        }        
+        }
 
-        public string? Description
+        public DateTime RentalDate
         {
-            get
-            {
-                if (_description != null) return _description;
-                return null;
-            }
+            get => _rentalDate;
             set
             {
-                if (_description != value)
+                if (_rentalDate != value)
                 {
-                    _description = value;
-                    OnPropertyChanged(() => Description);
+                    _rentalDate = value;
+                    OnPropertyChanged(() => RentalDate);
                 }
             }
         }
-        
-        public string? Color
-        {
-            get => _color;
-            set {
-                if (_color != value)
-                {
-                    _color = value;
-                    OnPropertyChanged(() => Color);
-                }
-            }
-        }        
 
-        public int Year
+        public DateTime ReturnDate
         {
-            get => _year;
+            get => _returnDate;
             set
             {
-                if (_year != value)
+                if (_returnDate != value)
                 {
-                    _year = value;
-                    OnPropertyChanged(() => Year);
+                    _returnDate = value;
+                    OnPropertyChanged(() => ReturnDate);
                 }
             }
         }
-               
-        public decimal RentalPrice
-        {
-            get => _rentalPrice;
-            set
-            {
-                if (_rentalPrice != value)
-                {
-                    _rentalPrice = value;
-                    OnPropertyChanged(() => RentalPrice);
-                }
-            }
-        }
-        
-        public bool CurrentlyRented
-        {
-            get => _currentlyRented;
-            set
-            {
-                if (_currentlyRented != value)
-                {
-                    _currentlyRented = value;
-                    OnPropertyChanged(() => CurrentlyRented);
-                }
-            }
-        }
+
 
     }
 }
