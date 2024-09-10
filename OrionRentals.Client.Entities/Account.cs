@@ -3,93 +3,148 @@
 namespace OrionRentals.Client.Entities
 {
     /// <summary>
-    /// Car entity client side.
+    /// Account entity client side.
     /// </summary>
-    public class Car : ObjectBase
+    public class Account : ObjectBase
     {
-        private int _carId;
-        private string? _description;
-        private string? _color;
-        private int _year;
-        private decimal _rentalPrice;
-        private bool _currentlyRented;
+        private int _accountId;
+        private string? _loginEmail;
+        private string? _firstName;
+        private string? _lastName;
+        private string? _address;
+        private string? _city;
+        private string? _state;
+        private string? _zipCode;
+        private string? _creditCard;
+        private string? _expDate;
 
-        public int CarId
+        public int AccountId
         {
-            get => _carId;
+            get => _accountId;
             set {
-                if (_carId != value)
+                if (_accountId != value)
                 {
-                    _carId = value;
-                    OnPropertyChanged(()=> CarId);
+                    _accountId  = value;
+                    OnPropertyChanged(()=> _accountId);
                 }
             }
         }        
 
-        public string? Description
+        public string? LoginEmail
         {
             get
             {
-                if (_description != null) return _description;
+                if (_loginEmail != null) return _loginEmail;
                 return null;
             }
             set
             {
-                if (_description != value)
+                if (_loginEmail != value)
                 {
-                    _description = value;
-                    OnPropertyChanged(() => Description);
+                    _loginEmail = value;
+                    OnPropertyChanged(() => LoginEmail);
                 }
             }
         }
         
-        public string? Color
+        public string? FirstName
         {
-            get => _color;
+            get => _firstName;
             set {
-                if (_color != value)
+                if (_firstName != value)
                 {
-                    _color = value;
-                    OnPropertyChanged(() => Color);
+                    _firstName = value;
+                    OnPropertyChanged(() => FirstName);
                 }
             }
-        }        
+        }
 
-        public int Year
+        public string? LastName
         {
-            get => _year;
+            get => _lastName;
             set
             {
-                if (_year != value)
+                if (_lastName != value)
                 {
-                    _year = value;
-                    OnPropertyChanged(() => Year);
+                    _lastName = value;
+                    OnPropertyChanged(() => LastName);
                 }
             }
         }
-               
-        public decimal RentalPrice
+
+        public string? Address
         {
-            get => _rentalPrice;
+            get => _address;
             set
             {
-                if (_rentalPrice != value)
+                if (_address != value)
                 {
-                    _rentalPrice = value;
-                    OnPropertyChanged(() => RentalPrice);
+                    _address = value;
+                    OnPropertyChanged(() => Address);
                 }
             }
         }
-        
-        public bool CurrentlyRented
+
+        public string? City
         {
-            get => _currentlyRented;
+            get => _city;
             set
             {
-                if (_currentlyRented != value)
+                if (_city != value)
                 {
-                    _currentlyRented = value;
-                    OnPropertyChanged(() => CurrentlyRented);
+                    _city = value;
+                    OnPropertyChanged(() => City);
+                }
+            }
+        }
+
+        public string? State
+        {
+            get => _state;
+            set
+            {
+                if (_state != value)
+                {
+                    _state = value;
+                    OnPropertyChanged(() => State);
+                }
+            }
+        }
+
+        public string? ZipCode
+        {
+            get => _zipCode;
+            set
+            {
+                if (_zipCode != value)
+                {
+                    _zipCode = value;
+                    OnPropertyChanged(() => ZipCode);
+                }
+            }
+        }
+
+        public string? CreditCard
+        {
+            get => _creditCard;
+            set
+            {
+                if (_creditCard != value)
+                {
+                    _creditCard = value;
+                    OnPropertyChanged(() => CreditCard);
+                }
+            }
+        }
+        public string? ExpDate
+        {
+            get => _expDate;
+            set
+            {
+                if (_expDate != value)
+                {
+                    _expDate = value;
+                    OnPropertyChanged(() => ExpDate);
                 }
             }
         }
