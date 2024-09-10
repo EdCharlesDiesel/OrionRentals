@@ -8,8 +8,7 @@ namespace OrionRentals.ResourceAccess.Data
 {
     public class OrionRentalContext : DbContext
     {
-        public OrionRentalContext()
-            : base()
+        public OrionRentalContext() : base()
         {
         }
 
@@ -20,7 +19,13 @@ namespace OrionRentals.ResourceAccess.Data
         public DbSet<Rental> Rentals { get; set; }
 
         public DbSet<Reservation> Reservations { get; set; }
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;database=OrionRental_DB_Development;Trusted_Connection=true");
+            }
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -32,7 +37,7 @@ namespace OrionRentals.ResourceAccess.Data
             //modelBuilder.Entity<Car>().HasKey<int>(e => e.CarId).Ignore(e => e.EntityId);
             //modelBuilder.Entity<Rental>().HasKey<int>(e => e.RentalId).Ignore(e => e.EntityId);
             //modelBuilder.Entity<Reservation>().HasKey<int>(e => e.ReservationId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Car>().Ignore(e => e.CurrentlyRented);
+            //modelBuilder.Entity<Car>().Ignore(e => e.CurrentlyRented);
         }
     }
 }
