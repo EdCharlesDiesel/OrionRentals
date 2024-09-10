@@ -11,31 +11,31 @@ namespace OrionRentals.Business.Entities
         public int AccountId { get; set; }
 
         [DataMember]
-        public string LoginEmail { get; set; }
+        public string? LoginEmail { get; set; }
 
         [DataMember]
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [DataMember]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [DataMember]
-        public string Address { get; set; }
+        public string? Address { get; set; }
 
         [DataMember]
-        public string City { get; set; }
+        public string? City { get; set; }
 
         [DataMember]
-        public string State { get; set; }
+        public string? State { get; set; }
 
         [DataMember]
-        public string ZipCode { get; set; }
+        public string? ZipCode { get; set; }
 
         [DataMember]
-        public string CreditCard { get; set; }
+        public string? CreditCard { get; set; }
 
         [DataMember]
-        public string ExpDate { get; set; }
+        public string? ExpDate { get; set; }
 
         #region IIdentifiableEntity members
 
